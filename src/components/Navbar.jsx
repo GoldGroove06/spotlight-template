@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Button from '@radui/ui/Button';
 import Tabs from '@radui/ui/Tabs';
