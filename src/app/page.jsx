@@ -7,6 +7,7 @@ import Text from "@radui/ui/Text";
 import Card from "@/components/Card"
 import Button from "@radui/ui/Button";
 import WorkCard from "@/components/WorkCard"
+import Footer from "@/components/Footer"
 
 const LinkedInIcon = () => {
   return (
@@ -17,23 +18,23 @@ const LinkedInIcon = () => {
 export default function Home() {
   return (
     <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-      <div className="bg-[var(--rad-ui-color-gray-300)] h-full lg:w-[90vw] w-screen ">
-        <section className="m-8 space-y-4 w-2/3">
+      <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-gray-600">
+        <section className="m-8 space-y-4 w-full p-8">
           <Avatar.Root>
             <Avatar.Image src="https://i.pravatar.cc/1000" />
             <Avatar.Fallback>KL</Avatar.Fallback>
           </Avatar.Root>
-          <Heading as="h2">
+          <Heading as="h1" className="text-gray-1000 w-[70%]">
             Software designer, founder, and amateur astronaut.
           </Heading>
-          <Text className="text-slate-900">
+          <Text className="text-slate-900 w-[70%]">
             I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.
           </Text>
           <span>
             <LinkedInIcon />
           </span>
         </section>
-
+     
         <section className="flex flex-row items-center justify-center">
           <div className="flex flex-row space-x-8 overflow-hidden ">
             {Array.from({ length: 5 }, (_, i) => (
@@ -47,20 +48,22 @@ export default function Home() {
 
           </div>
         </section>
+         <div className="flex lg:flex-row flex-col p-8 space-x-8">
         <section className="space-y-8">
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
         </section>
 
-        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 m-16">
+        <section>
+        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 lg:m-16 mt-8">
           <Heading as="h6" className="text-gray-1000">Stay Up to date</Heading>
           <Text className="text-slate-900">Get notified when I publish something new, and unsubscribe at any time.</Text>
           <input className="p-2 rounded-lg border border-gray-600 bg-gray-300 placeholder-gray-800" type="email" placeholder="Email address" />
           <Button>Subscribe</Button>
         </div>
 
-        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 m-16">
+        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 lg:m-16 mt-8">
 
           <Heading as="h6" className="text-gray-1000">Work</Heading>
          
@@ -70,7 +73,11 @@ export default function Home() {
             <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
             <Button className="w-full">Download CV</Button>
         </div>
+        </section>
+        </div>
+            <Footer/>
       </div>
+      
     </div>
   );
 }
