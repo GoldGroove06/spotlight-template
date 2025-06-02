@@ -4,6 +4,9 @@ import Image from "next/image";
 import Avatar from "@radui/ui/Avatar";
 import Heading from "@radui/ui/Heading";
 import Text from "@radui/ui/Text";
+import Card from "@/components/Card"
+import Button from "@radui/ui/Button";
+import WorkCard from "@/components/WorkCard"
 
 const LinkedInIcon = () => {
   return (
@@ -13,38 +16,61 @@ const LinkedInIcon = () => {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-   <div className="bg-[var(--rad-ui-color-gray-500)] h-screen lg:w-[90vw] w-screen ">
-    <section>
-    <Avatar.Root>
-        <Avatar.Image src="https://i.pravatar.cc/1000" />
-        <Avatar.Fallback>KL</Avatar.Fallback>
-    </Avatar.Root>
-    <Heading as="h2">
-      Software designer, founder, and amateur astronaut.
-    </Heading>
-    <Text>
-      I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.
-    </Text>
-    <span>
-      <LinkedInIcon />
-    </span>
-    </section>
+    <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
+      <div className="bg-[var(--rad-ui-color-gray-300)] h-full lg:w-[90vw] w-screen ">
+        <section className="m-8 space-y-4 w-2/3">
+          <Avatar.Root>
+            <Avatar.Image src="https://i.pravatar.cc/1000" />
+            <Avatar.Fallback>KL</Avatar.Fallback>
+          </Avatar.Root>
+          <Heading as="h2">
+            Software designer, founder, and amateur astronaut.
+          </Heading>
+          <Text className="text-slate-900">
+            I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.
+          </Text>
+          <span>
+            <LinkedInIcon />
+          </span>
+        </section>
 
-    <section className="flex flex-row items-center justify-center">
-      <div className="flex flex-row space-x-8 overflow-hidden ">
-         {Array.from({ length: 5 }, (_, i) => (
-        <Image
-          key={i}
-          src={`/images/image-${i + 1}.webp`}
-          alt={`Image ${i + 1}`}
-          width="350" height="100"
-        />
-      ))}
-        
+        <section className="flex flex-row items-center justify-center">
+          <div className="flex flex-row space-x-8 overflow-hidden ">
+            {Array.from({ length: 5 }, (_, i) => (
+              <Image
+                key={i}
+                src={`/images/image-${i + 1}.webp`}
+                alt={`Image ${i + 1}`}
+                width="350" height="100"
+              />
+            ))}
+
+          </div>
+        </section>
+        <section className="space-y-8">
+          <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+          <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+          <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+        </section>
+
+        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 m-16">
+          <Heading as="h6" className="text-gray-1000">Stay Up to date</Heading>
+          <Text className="text-slate-900">Get notified when I publish something new, and unsubscribe at any time.</Text>
+          <input className="p-2 rounded-lg border border-gray-600 bg-gray-300 placeholder-gray-800" type="email" placeholder="Email address" />
+          <Button>Subscribe</Button>
+        </div>
+
+        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 m-16">
+
+          <Heading as="h6" className="text-gray-1000">Work</Heading>
+         
+            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+            <Button className="w-full">Download CV</Button>
+        </div>
       </div>
-    </section>
-   </div>
-   </div>
+    </div>
   );
 }
