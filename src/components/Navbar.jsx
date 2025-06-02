@@ -11,17 +11,17 @@ const CloseIcon = () => {
 };
 function Navbar({ theme, setTheme }) {
     return (
-        <div className='bg-[var(--rad-ui-color-gray-300)] lg:w-[90vw] flex flex-row  lg:items-center lg:justify-center justify-end p-2 ml-2 mr-2 border border-l-gray-600 border-r-gray-600'>
-            <div className='hidden lg:block'>
+        <div className='bg-[var(--rad-ui-color-gray-300)] lg:w-[90vw] flex flex-row  lg:items-center w-full lg:justify-center justify-end p-2 ml-2 mr-2 border border-l-gray-600 border-r-gray-600'>
+            
 
-            <div className='flex flex-row space-x-4 text-slate-1000 rounded-full pl-4 pr-4 p-2  m-4 border border-gray-700 bg-slate-300 '>
-                <Link href="/about">About</Link>
-                <Link href="/articles">Articles</Link>
-                <Link href="/projects">Projects</Link>
-                <Link href="/speaking">Speaking</Link>
-                <Link href="/uses">Uses</Link>
-            </div>
-            </div>
+                <div className='hidden lg:block flex flex-row space-x-4 text-slate-1000 rounded-full pl-4 pr-4 p-2  m-4 border border-gray-700 bg-slate-300 lg:ml-auto'>
+                    <Link href="/about" className='hover:text-teal-900'>About</Link>
+                    <Link href="/articles" className='hover:text-teal-900'>Articles</Link>
+                    <Link href="/projects" className='hover:text-teal-900'>Projects</Link>
+                    <Link href="/speaking" className='hover:text-teal-900'>Speaking</Link>
+                    <Link href="/uses" className='hover:text-teal-900'>Uses</Link>
+                </div>
+            
 
             <div className='block lg:hidden'>
                 <Dialog.Root>
@@ -30,7 +30,7 @@ function Navbar({ theme, setTheme }) {
                     </Dialog.Trigger>
                     <Dialog.Portal>
                         <Dialog.Overlay />
-                        <Dialog.Content>
+                        <Dialog.Content className="!rounded-3xl !bg-slate-100 !p-8 ">
                             <Dialog.Title>
                                 Navigation
                             </Dialog.Title>
@@ -56,8 +56,8 @@ function Navbar({ theme, setTheme }) {
             </div>
             <Button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="items-end"
-                >
+                className="lg:ml-auto"
+            >
                 theme
             </Button>
 

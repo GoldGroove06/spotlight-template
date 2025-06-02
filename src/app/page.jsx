@@ -16,26 +16,29 @@ const LinkedInIcon = () => {
 }
 
 export default function Home() {
+  const scale = 1 - Math.min(scrollY, 100) / 200;
+
   return (
     <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
       <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600">
         <section className="m-8 space-y-4 w-full p-8">
-          <Avatar.Root>
+          <Avatar.Root className='!h-16 !w-16'
+          >
             <Avatar.Image src="https://i.pravatar.cc/1000" />
             <Avatar.Fallback>KL</Avatar.Fallback>
           </Avatar.Root>
-          <Heading as="h1" className="text-gray-1000 w-[70%]">
+          <Heading as="h1" className="text-gray-1000 lg:w-[70%]">
             Software designer, founder, and amateur astronaut.
           </Heading>
-          <Text className="text-slate-900 w-[70%]">
+          <Text className="text-slate-900 lg:w-[70%] !text-xl">
             I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.
           </Text>
-          <span>
+          <span className="p-4">
             <LinkedInIcon />
           </span>
         </section>
      
-        <section className="flex flex-row items-center justify-center">
+        <section className="flex flex-row items-center justify-center m-4">
           <div className=" space-x-8 flex flex-row items-center justify-center overflow-hidden p-4">
             {Array.from({ length: 5 }, (_, i) => (
               <Image
@@ -50,15 +53,15 @@ export default function Home() {
 
           </div>
         </section>
-         <div className="flex lg:flex-row flex-col p-8 space-x-8">
-        <section className="space-y-8">
+         <div className="flex lg:flex-row flex-col  m-8 space-x-8">
+        <section className="space-y-">
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
         </section>
 
-        <section>
-        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 lg:m-16 mt-8">
+        <section className="space-y-8 mt-4">
+        <div className="rounded-2xl p-8 space-y-4 border border-gray-600">
           <Heading as="h6" className="text-gray-1000">Stay Up to date</Heading>
           <Text className="text-slate-900">Get notified when I publish something new, and unsubscribe at any time.</Text>
           <div className="flex flex-row space-x-4 items-center">
@@ -67,7 +70,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-8 space-y-4 border border-gray-600 lg:m-16 mt-8">
+        <div className="rounded-2xl p-8 space-y-4 border border-gray-600">
 
           <Heading as="h6" className="text-gray-1000">Work</Heading>
          
