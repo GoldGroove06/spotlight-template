@@ -8,19 +8,20 @@ import Seperator from '@radui/ui/Separator';
 const CloseIcon = () => {
     return <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>;
 };
-function Navbar({theme, setTheme}) {
+function Navbar({ theme, setTheme }) {
     return (
-        <div className='sticky top-0 flex flex-row bg-[var(--rad-ui-color-gray-900)] lg:items-center lg:justify-center justify-end p-2 ml-2 mr-2 backdrop-blur-xl'>
+        <div className='bg-[var(--rad-ui-color-gray-300)] lg:w-[90vw] flex flex-row  lg:items-center lg:justify-center justify-end p-2 ml-2 mr-2 border border-l-gray-600 border-r-gray-600'>
             <div className='hidden lg:block'>
-            Navbar
-                 <Link href="/about">About</Link>
-                 <Link href="/articles">Articles</Link>
-                 <Link href="/projects">Projects</Link>
-                 <Link href="/speaking">Speaking</Link>
-                 <Link href="/uses">Uses</Link>
 
-                 </div>
-            
+            <div className='flex flex-row space-x-4 text-slate-1000 rounded-full pl-4 pr-4 p-2  m-4 border border-gray-700 bg-slate-300 '>
+                <Link href="/about">About</Link>
+                <Link href="/articles">Articles</Link>
+                <Link href="/projects">Projects</Link>
+                <Link href="/speaking">Speaking</Link>
+                <Link href="/uses">Uses</Link>
+            </div>
+            </div>
+
             <div className='block lg:hidden'>
                 <Dialog.Root>
                     <Dialog.Trigger >
@@ -34,16 +35,16 @@ function Navbar({theme, setTheme}) {
                             </Dialog.Title>
                             <Dialog.Description>
                                 <Link href="/about">About</Link>
-                                <Seperator/>
+                                <Seperator />
                                 <Link href="/articles">Articles</Link>
-                                <Seperator/>
+                                <Seperator />
                                 <Link href="/projects">Projects</Link>
-                                <Seperator/>
+                                <Seperator />
                                 <Link href="/speaking">Speaking</Link>
-                                <Seperator/>
+                                <Seperator />
                                 <Link href="/uses">Uses</Link>
                             </Dialog.Description>
-                            
+
                             <Dialog.Close>
                                 <CloseIcon />
                             </Dialog.Close>
@@ -52,13 +53,13 @@ function Navbar({theme, setTheme}) {
                     </Dialog.Portal>
                 </Dialog.Root>
             </div>
-                    <Button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-                </svg>
+            <Button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="items-end"
+                >
+                theme
             </Button>
-            
+
         </div>
     );
 }

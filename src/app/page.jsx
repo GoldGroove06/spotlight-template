@@ -18,7 +18,7 @@ const LinkedInIcon = () => {
 export default function Home() {
   return (
     <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-      <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-gray-600">
+      <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600">
         <section className="m-8 space-y-4 w-full p-8">
           <Avatar.Root>
             <Avatar.Image src="https://i.pravatar.cc/1000" />
@@ -36,13 +36,15 @@ export default function Home() {
         </section>
      
         <section className="flex flex-row items-center justify-center">
-          <div className="flex flex-row space-x-8 overflow-hidden ">
+          <div className=" space-x-8 flex flex-row items-center justify-center overflow-hidden p-4">
             {Array.from({ length: 5 }, (_, i) => (
               <Image
                 key={i}
                 src={`/images/image-${i + 1}.webp`}
                 alt={`Image ${i + 1}`}
-                width="350" height="100"
+                width="300" height="100"
+                
+                className="rounded-xl aspect-square object-cover rotate-[5deg]"
               />
             ))}
 
@@ -59,8 +61,10 @@ export default function Home() {
         <div className="rounded-2xl p-8 space-y-4 border border-gray-600 lg:m-16 mt-8">
           <Heading as="h6" className="text-gray-1000">Stay Up to date</Heading>
           <Text className="text-slate-900">Get notified when I publish something new, and unsubscribe at any time.</Text>
-          <input className="p-2 rounded-lg border border-gray-600 bg-gray-300 placeholder-gray-800" type="email" placeholder="Email address" />
-          <Button>Subscribe</Button>
+          <div className="flex flex-row space-x-4 items-center">
+          <input className="p-2 rounded-lg border border-gray-600 bg-gray-300 placeholder-gray-800 w-full" type="email" placeholder="Email address" />
+          <Button className="p-2">Join</Button>
+          </div>
         </div>
 
         <div className="rounded-2xl p-8 space-y-4 border border-gray-600 lg:m-16 mt-8">
