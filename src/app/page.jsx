@@ -16,7 +16,6 @@ const LinkedInIcon = () => {
 }
 
 export default function Home() {
-  const scale = 1 - Math.min(scrollY, 100) / 200;
 
   return (
     <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
