@@ -20,25 +20,27 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
       <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600">
-        <section className="m-8 space-y-4 w-full p-8">
+        <section className=" w-full max-w-[1500] m-8 ml-[10vw] items-start justify-start flex flex-col">
+          <div className="max-w-3xl space-y-6">
           <Avatar.Root className='!h-16 !w-16'
           >
             <Avatar.Image src="https://i.pravatar.cc/1000" />
             <Avatar.Fallback>KL</Avatar.Fallback>
           </Avatar.Root>
-          <Heading as="h1" className="text-gray-1000 lg:w-[70%]">
+          <Heading as="h1" className="text-gray-1000">
             Software designer, founder, and amateur astronaut.
           </Heading>
-          <Text className="text-slate-900 lg:w-[70%] !text-xl">
+          <Text className="text-slate-900 !text-xl">
             I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.
           </Text>
           <span className="p-4">
             <LinkedInIcon />
           </span>
+          </div>
         </section>
      
         <section className="flex flex-row items-center justify-center m-4">
-          <div className=" space-x-8 flex flex-row items-center justify-center overflow-hidden p-4">
+          <div className=" space-x-8 flex flex-row items-center justify-center overflow-hidden w-[98vw] p-4">
             {Array.from({ length: 5 }, (_, i) => (
               <Image
                 key={i}
@@ -46,7 +48,7 @@ export default function Home() {
                 alt={`Image ${i + 1}`}
                 width="300" height="100"
                 
-                className="rounded-xl aspect-square object-cover rotate-[5deg]"
+                className="rounded-xl aspect-square  rotate-[5deg]"
               />
             ))}
 
