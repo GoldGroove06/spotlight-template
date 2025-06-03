@@ -83,7 +83,7 @@ export default function Home() {
         </div>
         </section>
         </div>
-            <Footer/>
+            
       </div>
       
     </div>

@@ -8,8 +8,8 @@ import Separator from "@radui/ui/Separator";
 function page(props) {
     return (
         <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-        <div className='bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-row lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600'>
-            <section className='flex flex-1 flex-col p-8 mt-16 space-y-8'>
+        <div className='bg-[var(--rad-ui-color-gray-300)] h-full justify-center  flex flex-row lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600'>
+            <section className='flex flex-1 flex-col p-8 pl-16 mt-16 space-y-8'>
             <Heading as='h1'>
                 I’m Spencer Sharp. I live in New York City, where I design the future.
             </Heading>
@@ -23,11 +23,11 @@ I spent the next few summers indoors working on a rocket design, while I recover
 Today, I’m the founder of Planetaria, where we’re working on civilian space suits and manned shuttle kits you can assemble at home so that the next generation of kids really can make it to orbit — from the comfort of their own backyards.<br/>
             </Text>
             </section>
-        <section className='flex flex-1 flex-col p-8 mt-16 justify-center items-center w-full'>
-            <Image src="/images/image-1.webp" alt="" height={300} width={300}
+        <div className='flex flex-1 flex-col mt-28 pl-16  items-center w-full'>
+            <Image src="/images/portrait.webp" alt="" height={300} width={400}
             className='object-contain rounded-2xl rotate-3'
             />
-            <div className='flex flex-col'>
+            <div className='flex flex-col items-start  space-y-4 mt-16 w-[80%]'>
                 <div>Follow on X</div>
                 <div>Follow on X</div>
                 <div>Follow on X</div>
@@ -35,7 +35,7 @@ Today, I’m the founder of Planetaria, where we’re working on civilian space 
                 <Separator />
                 <div>emailme@email.com</div>
             </div>
-            </section>
+            </div>
         </div>
         </div>
     );
