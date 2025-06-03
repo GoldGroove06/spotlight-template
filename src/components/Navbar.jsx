@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@radui/ui/Button';
 import Tabs from '@radui/ui/Tabs';
 import Dialog from '@radui/ui/Dialog';
@@ -10,12 +10,38 @@ const CloseIcon = () => {
     return <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>;
 };
 function Navbar({ theme, setTheme }) {
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+        console.log(currentScrollY);
+        console.log(lastScrollY);
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setHidden(true);
+      } 
+      else if (currentScrollY < 100 && currentScrollY < lastScrollY) {
+        setHidden(true);
+      }
+      else {
+        setHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
     return (
         
-        <nav className='bg-[var(--rad-ui-color-gray-300)] lg:w-[90vw] flex flex-row  lg:items-center w-full lg:justify-center justify-end p-2 ml-2 mr-2 border border-l-gray-600 border-r-gray-600'>
+        <nav className={`  bg-[var(--rad-ui-color-gray-300)] lg:w-[90vw] h-24 flex flex-row  lg:items-center w-full lg:justify-center justify-end p-2 ml-2 mr-2 border border-l-gray-600 border-r-gray-600`}>
             
 
-                <div className='hidden lg:block flex flex-row space-x-6  text-slate-1000 rounded-full pl-4 pr-4 p-2  m-4 border border-gray-700 bg-slate-300'>
+                <div className={`hidden lg:block flex flex-row space-x-6  text-slate-1000 rounded-full pl-4 pr-4 p-2  m-4 border border-gray-700 bg-slate-300  ${hidden ? " " : "translate-y-0 fixed top-0 z-50"}`}>
                     <Link href="/about" className='hover:text-teal-900'>About</Link>
                     <Link href="/articles" className='hover:text-teal-900'>Articles</Link>
                     <Link href="/projects" className='hover:text-teal-900'>Projects</Link>
