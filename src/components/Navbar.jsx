@@ -43,9 +43,9 @@ function Navbar({ theme, setTheme }) {
 
     return (
 
-        <nav className={`   lg:w-[90vw] max-w-[1240px] h-24 flex flex-row pl-6 pr-4 justify-between lg:pl-[6rem] lg:pr-[6rem] lg:items-center w-full justify-end border-b-0 lg:border border-l-gray-600 border-r-gray-600 lg:border-b-0 ${hidden ? "bg-gray-300" : "translate-y-0 fixed top-0 z-50 bg-trasparent"}`}>
-            <Link href='/' className='flex flex-row space-x-4 items-center'>
-                <div className={`h-10 w-10 items-center justify-center flex bg-slate-200 border border-gray-700 rounded-[100%]`   }>
+        <nav className={`   lg:w-[90vw] max-w-[1240px] h-24 flex flex-row pl-6 pr-4 justify-between lg:pl-[4.5rem] lg:pr-[4.5rem] lg:items-center w-full justify-end border-b-0 lg:border border-l-gray-600 border-r-gray-600 lg:border-b-0 ${hidden ? "bg-gray-300" : "translate-y-0 fixed top-0 z-50 bg-trasparent"}`}>
+            <Link href='/' className='flex flex-row space-x-4 lg:items-center'>
+                <div className={`h-11 w-11 items-center justify-center flex bg-slate-200 border border-gray-700 rounded-[100%] mt-4 lg:mt-0`   }>
                     <Avatar.Root>
                         <Avatar.Image src="https://i.pravatar.cc/1000" />
                         <Avatar.Fallback>KL</Avatar.Fallback>

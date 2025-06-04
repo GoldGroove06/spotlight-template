@@ -19,8 +19,8 @@ export default function Home() {
 
   return (
     <>
-        <section className=" items-center flex flex-col">
-          <div className="lg:ml-16 max-w-3xl space-y-6">
+        <section className=" flex flex-col w-full items-start">
+          <div className="lg:ml-12 max-w-3xl space-y-6 flex- flex flex-col items-start">
             <Avatar.Root className='!h-16 !w-16'
             >
               <Avatar.Image src="https://i.pravatar.cc/1000" />
@@ -38,8 +38,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className=" m-4 flex justify-center ml-48">
-          <div className="flex flex-row w-full space-x-8 justify-center p-4 w-[100vh]">
+        <section className="pr-16 flex flex-col items-center overflow-hidden w-[98vw] p-4">
+          <div className="flex flex-row space-x-4 justify-center">
             {Array.from({ length: 5 }, (_, i) => (
               <Image
                 key={i}
@@ -52,7 +52,8 @@ export default function Home() {
             ))}
 
           </div>
-        </section>
+        </section> 
+
         <div className="flex lg:flex-row flex-col  lg:m-8 lg:space-x-8 ">
           <section className="mt-16 lg:mt-0 space-y-16 lg:space-y-0">
             <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />

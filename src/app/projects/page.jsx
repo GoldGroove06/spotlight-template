@@ -8,7 +8,7 @@ import ProjectCard from '../../components/ProjectCard';
 
 function page(props) {
     return (
-       <div className='lg:ml-16 lg:mt-16'>
+       <div className='lg:ml-14 lg:mt-16'>
                 <section className='max-w-3xl space-y-8 mb-16'>
                     <Heading as="h1">Things I’ve made trying to put my dent in the universe.</Heading>
                     <Text className="text-slate-900 !text-lg">
