@@ -38,8 +38,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-row items-center justify-center m-4">
-          <div className=" space-x-8 flex flex-row items-center justify-center">
+        <section className=" m-4 flex justify-center">
+          <div className="flex flex-row w-full space-x-8 justify-center p-4 w-[100vh]">
             {Array.from({ length: 5 }, (_, i) => (
               <Image
                 key={i}

@@ -7,7 +7,7 @@ import Separator from "@radui/ui/Separator";
 
 function page(props) {
     return (
-        <div className='flex flex-row'>
+        <div className='flex lg:flex-row flex-col'>
                 <div className='lg:hidden block m-6'>
                     <Image src="/images/portrait.webp" alt="" height={200} width={300}
                         className='object-contain rounded-2xl rotate-3'
