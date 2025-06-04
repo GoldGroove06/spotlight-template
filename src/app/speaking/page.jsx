@@ -19,7 +19,7 @@ function page() {
                
                 <div className='flex lg:flex-row flex-col items-start mb-8 space-y-8 lg:space-y-0'>
                      <Seperator orientation="vertical" className="lg:block hidden"/>
-                    <div className=' text-slate-1000 mt-6 text-nowrap lg:ml-4'>Conferences</div>
+                    <div className=' text-slate-1000 mt-6 text-nowrap lg:ml-4 lg:pt-7'>Conferences</div>
                     <div className='flex flex-col lg:ml-10 space-y-16 lg:space-y-0'>
                 <Card date="SysConf 2021" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
                 <Card date="SysConf 2021" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
@@ -29,7 +29,7 @@ function page() {
                
                 <div className='flex lg:flex-row flex-col items-start mt-16 space-y-8 lg:space-y-0'>
                     <Seperator orientation="vertical" className=""/>
-                    <div className='text-slate-1000 mt-6 text-nowrap lg:ml-4'>Podcasts</div>
+                    <div className='text-slate-1000 mt-6 lg:pt-7 text-nowrap lg:ml-4'>Podcasts</div>
                      <div className='flex flex-col lg:ml-16 space-y-16 lg:space-y-0'>
                 <Card date="SysConf 2021" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
                 <Card date="SysConf 2021" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
