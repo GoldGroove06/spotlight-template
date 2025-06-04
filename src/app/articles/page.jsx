@@ -19,18 +19,18 @@ function page(props) {
 
                     <div className='flex flex-row space-x-4 items-start'>
                         <Seperator orientation="vertical" className="lg:block hidden" />
-                        <div className='text-xs text-slate-800 mt-9 text-nowrap lg:block hidden'>September 5, 2022</div>
-                        <Card date="" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+                        <div className='text-xs text-slate-800 mt-9 lg:mt-7 text-nowrap lg:block hidden'>September 5, 2022</div>
+                        <Card date="September 5, 2022" dateClassName="block lg:hidden" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
                     </div>
                     <div className='flex flex-row space-x-4 items-start'>
                         <Seperator orientation="vertical" className="lg:block hidden" />
-                        <div className='text-xs text-slate-800 mt-9 text-nowrap lg:block hidden'>September 5, 2022</div>
-                        <Card date="" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+                        <div className='text-xs text-slate-800 mt-9 lg:mt-7 text-nowrap lg:block hidden'>September 5, 2022</div>
+                        <Card date="September 5, 2022" dateClassName="block lg:hidden" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
                     </div>
                     <div className='flex flex-row space-x-4 items-start'>
                         <Seperator orientation="vertical" className="lg:block hidden" />
-                        <div className='text-xs text-slate-800 mt-9 text-nowrap lg:block hidden'>September 5, 2022</div>
-                        <Card date="" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+                        <div className='text-xs text-slate-800 mt-9 lg:mt-7 text-nowrap lg:block hidden'>September 5, 2022</div>
+                        <Card date="September 5, 2022" dateClassName="block lg:hidden" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
                     </div>
                 </section>
 
