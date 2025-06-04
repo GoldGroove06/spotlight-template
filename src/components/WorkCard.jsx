@@ -13,11 +13,11 @@ function WorkCard({companyName, role, date}) {
               <Avatar.Fallback>KL</Avatar.Fallback>
             </Avatar.Root>
             </span>
-            <div className='w-full'>
-              <Heading as="h6" className="text-gray-1000">{companyName}</Heading>
+            <div className='w-full space-y-1'>
+              <Text className="text-gray-1000 !font-medium !text-sm">{companyName}</Text>
               <div className="flex flex-row justify-between">
-                <Text className="text-slate-900 text-sm">{role}</Text>
-                <Text className="text-slate-900 text-sm">{date}</Text>
+                <Text className="text-slate-900 !text-sm">{role}</Text>
+                <Text className="text-slate-900 !text-sm">{date}</Text>
               </div>
             </div>
            </div> 

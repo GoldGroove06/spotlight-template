@@ -19,8 +19,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-      <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600">
-        <section className=" w-full max-w-[1500] m-8 ml-[10vw] items-start justify-start flex flex-col">
+      <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 p-4 border-r-gray-600">
+        <section className=" w-full max-w-[1500] m-8 lg:ml-[10vw] items-start justify-start flex flex-col">
           <div className="max-w-3xl space-y-6">
           <Avatar.Root className='!h-16 !w-16'
           >
@@ -54,16 +54,16 @@ export default function Home() {
 
           </div>
         </section>
-         <div className="flex lg:flex-row flex-col  m-8 space-x-8">
-        <section className="space-y-">
+         <div className="flex lg:flex-row flex-col  lg:m-8 lg:space-x-8 ">
+        <section className="mt-16 lg:mt-0 space-y-16 lg:space-y-0">
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
           <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
         </section>
 
-        <section className="space-y-8 mt-4">
-        <div className="rounded-2xl p-8 space-y-4 border border-gray-600">
-          <Heading as="h6" className="text-gray-1000">Stay Up to date</Heading>
+        <section className="space-y-8 lg:mt-4  mt-16">
+        <div className="rounded-2xl p-6 space-y-4 border border-gray-600">
+          <Text className="text-gray-1000 !font-semibold">Stay Up to date</Text>
           <Text className="text-slate-900">Get notified when I publish something new, and unsubscribe at any time.</Text>
           <div className="flex flex-row space-x-4 items-center">
           <input className="p-2 rounded-lg border border-gray-600 bg-gray-300 placeholder-gray-800 w-full" type="email" placeholder="Email address" />
@@ -71,9 +71,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-8 space-y-4 border border-gray-600">
+        <div className="rounded-2xl p-6 space-y-4 border border-gray-600">
 
-          <Heading as="h6" className="text-gray-1000">Work</Heading>
+          <Text className="text-gray-1000 !font-semibold">Work</Text>
          
             <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
             <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
