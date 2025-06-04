@@ -9,8 +9,7 @@ import MasterParentCard from '@/components/MasterParentCard';
 
 function page() {
     return (
-        <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-            <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-start flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600 lg:p-16  p-4 space-y-8">
+            <div className='lg:ml-16 lg:mt-16'>
                 <section className='max-w-3xl space-y-8 mb-16'>
                     <Heading as="h1">Software I use, gadgets I love, and other things I recommend.</Heading>
                     <Text className="text-slate-900 !text-lg">
@@ -47,7 +46,6 @@ function page() {
                 </section>
 
             </div>
-        </div>
     );
 }
 

@@ -43,7 +43,7 @@ function Navbar({ theme, setTheme }) {
 
     return (
 
-        <nav className={`  bg-[var(--rad-ui-color-gray-300)] lg:w-[90vw] h-24 flex flex-row  lg:items-center w-full lg:justify-center justify-end p-2 ml-2 mr-2 border border-l-gray-600 border-r-gray-600`}>
+        <nav className={`  bg-[var(--rad-ui-color-gray-300)] lg:w-[90vw] max-w-[1240px] h-24 flex flex-row  lg:items-center w-full lg:justify-center justify-end p-2 ml-2 mr-2 border border-l-gray-600 border-r-gray-600 border-b-0`}>
 
 
             <div className={`hidden lg:block flex flex-row space-x-6  text-slate-1000 rounded-full pl-4 pr-4 p-2  m-4 border border-gray-700 bg-slate-300  ${hidden ? " " : "translate-y-0 fixed top-2 z-50"}`}>
