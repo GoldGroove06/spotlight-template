@@ -8,7 +8,7 @@ import Separator from "@radui/ui/Separator";
 function page(props) {
     return (
         <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-            <div className='bg-[var(--rad-ui-color-gray-300)] h-full justify-center  flex lg:flex-row flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600'>
+            <div className='bg-[var(--rad-ui-color-gray-300)] h-full justify-center  flex lg:flex-row flex-col lg:w-[90vw] w-screen border border-l-gray-600 pb-32 border-r-gray-600'>
                 <div className='lg:hidden block m-6'>
                     <Image src="/images/portrait.webp" alt="" height={200} width={300}
                         className='object-contain rounded-2xl rotate-3'

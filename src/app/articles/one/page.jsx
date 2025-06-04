@@ -9,7 +9,7 @@ import Image from "next/image";
 function page(props) {
     return (
         <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-            <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600 lg:p-16 p-4 space-y-8">
+            <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 border-r-gray-600 lg:p-16 p-4 pb-32 space-y-8">
 
                 <section className='lg:max-w-3xl space-y-8 mb-16'>
                     <div className='space-x-4 flex lg:flex-row flex-col'>

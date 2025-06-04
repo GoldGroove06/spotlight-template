@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center bg-gray-100 justify-center min-h-screen text-gray-1000">
-      <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 p-4 border-r-gray-600">
+      <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 p-4 pb-32 border-r-gray-600">
         <section className=" w-full max-w-[1500] m-8 lg:ml-[10vw] items-start justify-start flex flex-col">
           <div className="max-w-3xl space-y-6">
             <Avatar.Root className='!h-16 !w-16'
