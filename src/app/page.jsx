@@ -38,7 +38,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className=" m-4 flex justify-center">
+        <section className=" m-4 flex justify-center ml-48">
           <div className="flex flex-row w-full space-x-8 justify-center p-4 w-[100vh]">
             {Array.from({ length: 5 }, (_, i) => (
               <Image
