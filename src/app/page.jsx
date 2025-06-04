@@ -22,23 +22,23 @@ export default function Home() {
       <div className="bg-[var(--rad-ui-color-gray-300)] h-full justify-center items-center flex flex-col lg:w-[90vw] w-screen border border-l-gray-600 p-4 border-r-gray-600">
         <section className=" w-full max-w-[1500] m-8 lg:ml-[10vw] items-start justify-start flex flex-col">
           <div className="max-w-3xl space-y-6">
-          <Avatar.Root className='!h-16 !w-16'
-          >
-            <Avatar.Image src="https://i.pravatar.cc/1000" />
-            <Avatar.Fallback>KL</Avatar.Fallback>
-          </Avatar.Root>
-          <Heading as="h1" className="text-gray-1000">
-            Software designer, founder, and amateur astronaut.
-          </Heading>
-          <Text className="text-slate-900 !text-xl">
-            I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.
-          </Text>
-          <span className="p-4">
-            <LinkedInIcon />
-          </span>
+            <Avatar.Root className='!h-16 !w-16'
+            >
+              <Avatar.Image src="https://i.pravatar.cc/1000" />
+              <Avatar.Fallback>KL</Avatar.Fallback>
+            </Avatar.Root>
+            <Heading as="h1" className="text-gray-1000">
+              Software designer, founder, and amateur astronaut.
+            </Heading>
+            <Text className="text-slate-900 !text-xl">
+              I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.
+            </Text>
+            <span className="p-4">
+              <LinkedInIcon />
+            </span>
           </div>
         </section>
-     
+
         <section className="flex flex-row items-center justify-center m-4">
           <div className=" space-x-8 flex flex-row items-center justify-center overflow-hidden w-[98vw] p-4">
             {Array.from({ length: 5 }, (_, i) => (
@@ -47,45 +47,45 @@ export default function Home() {
                 src={`/images/image-${i + 1}.webp`}
                 alt={`Image ${i + 1}`}
                 width="300" height="100"
-                
+
                 className="rounded-xl aspect-square  rotate-[5deg]"
               />
             ))}
 
           </div>
         </section>
-         <div className="flex lg:flex-row flex-col  lg:m-8 lg:space-x-8 ">
-        <section className="mt-16 lg:mt-0 space-y-16 lg:space-y-0">
-          <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
-          <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
-          <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
-        </section>
+        <div className="flex lg:flex-row flex-col  lg:m-8 lg:space-x-8 ">
+          <section className="mt-16 lg:mt-0 space-y-16 lg:space-y-0">
+            <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+            <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+            <Card date="01/01/2023" title="Card title" description="Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system." />
+          </section>
 
-        <section className="space-y-8 lg:mt-4  mt-16">
-        <div className="rounded-2xl p-6 space-y-4 border border-gray-600">
-          <Text className="text-gray-1000 !font-semibold">Stay Up to date</Text>
-          <Text className="text-slate-900">Get notified when I publish something new, and unsubscribe at any time.</Text>
-          <div className="flex flex-row space-x-4 items-center">
-          <input className="p-2 rounded-lg border border-gray-600 bg-gray-300 placeholder-gray-800 w-full" type="email" placeholder="Email address" />
-          <Button className="p-2">Join</Button>
-          </div>
+          <section className="space-y-8 lg:mt-4  mt-16">
+            <div className="rounded-2xl p-6 space-y-4 border border-gray-600">
+              <Text className="text-gray-1000 !font-semibold">Stay Up to date</Text>
+              <Text className="text-slate-900">Get notified when I publish something new, and unsubscribe at any time.</Text>
+              <div className="flex flex-row space-x-4 items-center">
+                <input className="p-2 rounded-lg border border-gray-600 bg-gray-300 placeholder-gray-800 w-full" type="email" placeholder="Email address" />
+                <Button className="p-2">Join</Button>
+              </div>
+            </div>
+
+            <div className="rounded-2xl p-6 space-y-4 border border-gray-600">
+
+              <Text className="text-gray-1000 !font-semibold">Work</Text>
+
+              <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+              <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+              <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+              <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
+              <Button className="w-full">Download CV</Button>
+            </div>
+          </section>
         </div>
 
-        <div className="rounded-2xl p-6 space-y-4 border border-gray-600">
-
-          <Text className="text-gray-1000 !font-semibold">Work</Text>
-         
-            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
-            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
-            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
-            <WorkCard companyName="Planetaria" role="CEO" date="2023 - Present" />
-            <Button className="w-full">Download CV</Button>
-        </div>
-        </section>
-        </div>
-            
       </div>
-      
+
     </div>
   );
 }
