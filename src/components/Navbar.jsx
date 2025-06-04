@@ -19,31 +19,29 @@ function Navbar({ theme, setTheme }) {
     console.log(pathname.slice(1));
 
     useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            console.log(currentScrollY);
-            console.log(lastScrollY);
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                setHidden(true);
-            }
-            else if (currentScrollY < 100 && currentScrollY < lastScrollY) {
-                setHidden(true);
-            }
-            else {
-                setHidden(false);
-            }
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
 
-            setLastScrollY(currentScrollY);
-        };
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            
+            setHidden(true);
+        } else if (currentScrollY < lastScrollY) {
+            
+            setHidden(false);
+        }
 
-        window.addEventListener("scroll", handleScroll);
+        setLastScrollY(currentScrollY);
+    };
 
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY]);
+
 
     return (
-
-        <nav className={`   lg:w-[90vw] max-w-[1240px] h-24 flex flex-row pl-6 pr-4 justify-between lg:pl-[4.5rem] lg:pr-[4.5rem] lg:items-center w-full justify-end border-b-0 lg:border border-l-gray-600 border-r-gray-600 lg:border-b-0 ${hidden ? "bg-gray-300" : "translate-y-0 fixed top-0 z-50 bg-trasparent"}`}>
+        <>
+        <div className="h-24 lg:w-[90vw] max-w-[1240px] bg-gray-300 flex flex-row pl-6 pr-4 justify-between lg:pl-[4.5rem] lg:pr-[4.5rem] lg:items-center w-full justify-end border-b-0 lg:border border-l-gray-600 border-r-gray-600 lg:border-b-0" />
+        <nav className={`   lg:w-[90vw] max-w-[1240px] h-24 flex flex-row pl-6 pr-4 justify-between lg:pl-[4.5rem] lg:pr-[4.5rem] lg:items-center w-full justify-end border-b-0 lg:border border-l-gray-600 border-r-gray-600 lg:border-b-0 translate-y-0 fixed top-0 z-50 bg-trasparent`}>
             <Link href='/' className='flex flex-row space-x-4 lg:items-center'>
                 <div className={`h-11 w-11 items-center justify-center flex bg-slate-200 border border-gray-700 rounded-[100%] mt-4 lg:mt-0`   }>
                     <Avatar.Root>
@@ -112,7 +110,7 @@ function Navbar({ theme, setTheme }) {
             </Button>
                 </div>
         </nav>
-
+</>
     );
 }
 
