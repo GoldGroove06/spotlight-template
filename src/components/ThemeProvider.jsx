@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 function ThemeProvider({ children }) {
      const [theme, setTheme] = useState(() => {
-        if (typeof window !== 'undefined' && window.localStorage ) {
+        if ( localStorage ) {
             return localStorage.getItem('themePreference') || 'dark';
         }
         return 'dark';
