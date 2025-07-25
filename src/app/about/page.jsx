@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import Heading from "@radui/ui/Heading";
 import Text from "@radui/ui/Text";

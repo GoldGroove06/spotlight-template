@@ -5,17 +5,16 @@ import Theme from "@radui/ui/Theme";
 import Navbar from "./Navbar";
 import Layout from "./Layout";
 import Footer from "./Footer";
+import { setCookie, getCookie } from 'cookies-next';
 
-function ThemeProvider({ children }) {
-     const [theme, setTheme] = useState(() => {
-        if ( localStorage ) {
-            return localStorage.getItem('themePreference') || 'dark';
-        }
-        return 'dark';
-    })
-    
+
+function ThemeProvider({ children, themeCookie }) {
+    console.log(themeCookie);
+    const [theme, setTheme] = useState(themeCookie ? themeCookie : 'light');
+
+    console.log(getCookie('theme'));
     useEffect(() => {
-        localStorage.setItem('themePreference', theme);
+        setCookie('theme', theme);
     }, [theme]);
 
     return (
